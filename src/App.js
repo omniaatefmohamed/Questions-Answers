@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Row, Container } from 'react-bootstrap';
+import Addquestion from './components/Addquestion'
+import Questions_list from './components/Questions_list'
+import DeleteData from './components/DeleteData'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container className='p-5'>
+          <Row>
+              <h3 className='mb-4'>Questions & Answers </h3>
+              <Addquestion/>
+              <Questions_list/>
+              <DeleteData />
+          </Row>
+      </Container>
     </div>
   );
 }
