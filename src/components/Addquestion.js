@@ -11,7 +11,6 @@ const Addquestion = ({addData}) => {
         setQuestion("");
         setAnswer("");
         addData();
-        console.log(data)
     }
     return (
         <Form>

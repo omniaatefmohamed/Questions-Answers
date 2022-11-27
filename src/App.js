@@ -1,16 +1,16 @@
 import './App.css';
 import { Row, Container } from 'react-bootstrap';
 import Addquestion from './components/Addquestion'
-import Questions_list from './components/Questions_list'
+import QuestionsList from './components/QuestionsList'
 import DeleteData from './components/DeleteData'
-import {data} from './components/data'
-import { useState } from 'react';
+import { useState } from 'react'
+import { data } from './components/data'
 
 
 function App() {
   const [dataList,setDataList] = useState(data);
   const addData = () => {
-    setDataList(data)
+    setDataList([...data])
   }
   return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
           <Row>
               <h3 className='mb-4'>Questions & Answers </h3>
               <Addquestion addData={addData}/>
-              <Questions_list dataList={dataList}/>
+              <QuestionsList dataList={dataList}/>
               <DeleteData dataList={dataList}/>
           </Row>
       </Container>
