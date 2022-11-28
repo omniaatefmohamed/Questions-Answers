@@ -1,28 +1,18 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Row, Form, Button, Col } from 'react-bootstrap'
-import {data} from './data'
 
-const Addquestion = ({addData}) => {
-    const [question, setQuestion] = useState('')
-    const [answer, setAnswer] = useState('')
-    const addFullData = (e) => {
-        e.preventDefault();
-        data.push({id:Math.random(), q:question, a:answer});
-        setQuestion("");
-        setAnswer("");
-        addData();
-    }
+const Addquestion = () => {
     return (
         <Form>
             <Row>
                 <Col md="5" xs="12">
-                    <Form.Control value={question} onChange={(e) => setQuestion(e.target.value)} type="text" placeholder="Enter Your Question" />
+                    <Form.Control type="text" placeholder="Enter Your Question" />
                 </Col>
                 <Col md="5" xs="12">
-                    <Form.Control value={answer} onChange={(e) => setAnswer(e.target.value)} type="text" placeholder="Enter Your Answer" />
+                    <Form.Control type="text" placeholder="Enter Your Answer" />
                 </Col>
                 <Col md="2" xs="12">
-                    <Button onClick={addFullData} variant="success" type="submit" className='text-white w-100'>
+                    <Button variant="success" type="submit" className='text-white w-100'>
                         Add
                     </Button>
                 </Col>
