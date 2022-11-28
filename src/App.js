@@ -12,7 +12,7 @@ function App() {
           <Row>
               <h3 className='mb-4'>Questions & Answers </h3>
               <Addquestion/>
-              <Questions_list/>
+              <QuestionsList/>
               <DeleteData />
           </Row>
       </Container>

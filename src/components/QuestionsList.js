@@ -1,7 +1,7 @@
 import React from 'react'
 import { Accordion, Button, Alert, Row } from 'react-bootstrap'
 import {data} from './data'
-const Questions_list = ({ dataList }) => {
+const QuestionsList = ({ dataList }) => {
     const DeleteAllData = () => {
         console.log(dataList.length)
         dataList.splice(0, data.length)
@@ -36,4 +36,4 @@ const Questions_list = ({ dataList }) => {
     )
 }
 
-export default Questions_list
+export default QuestionsList
